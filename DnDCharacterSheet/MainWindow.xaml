@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnDCharacterSheet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="1200" Width="800">
+    <StackPanel>
+            <Label Content="Character Sheet" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <StackPanel Margin="50, 0" HorizontalAlignment="Left">
+            <TextBox x:Name="CharacterName" HorizontalAlignment="Left" Width="200" Text="Character Name" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Sylfaen" FontWeight="Bold" FontSize="20"/>
+        </StackPanel>
+        <StackPanel Margin="50, 0" HorizontalAlignment="Left" Background="AliceBlue">
+            <Label Content="Strength"/>
+            <TextBox x:Name="Strength" Width="20" Height="20" />
+
+
+        </StackPanel>
+    </StackPanel>
 </Window>
