@@ -5,17 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnDCharacterSheet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1200" Width="800">
-    <StackPanel>
-            <Label Content="Character Sheet" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <StackPanel Margin="50, 0" HorizontalAlignment="Left">
-            <TextBox x:Name="CharacterName" HorizontalAlignment="Left" Width="200" Text="Character Name" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Sylfaen" FontWeight="Bold" FontSize="20"/>
-        </StackPanel>
-        <StackPanel Margin="50, 0" HorizontalAlignment="Left" Background="AliceBlue">
-            <Label Content="Strength"/>
-            <TextBox x:Name="Strength" Width="20" Height="20" />
+        Title="DnD Character Sheet">
+    <Grid Background="SeaGreen">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Margin="5" Padding="5" Grid.Column="7" BorderThickness="1" BorderBrush="Red" Background="White" CornerRadius="5">
+            <TextBox Text="Lorem ipsum" BorderBrush="AntiqueWhite"/>
+        </Border>
+        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" FontFamily="Sylfaen" FontSize="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Character Sheet" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-
+        <StackPanel Margin="5" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <TextBox x:Name="CharacterName" TextAlignment="Center" Text="Character Name" TextWrapping="Wrap" FontFamily="Sylfaen" FontWeight="Bold" FontSize="20"/>
         </StackPanel>
-    </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Background="AliceBlue">
+                <Label Content="Strength"/>
+                <TextBox x:Name="Strength" Margin="5" Width="20" Height="20" />
+            </StackPanel>
+            <StackPanel Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Background="AliceBlue">
+                <Label Content="Dexterity"/>
+                <TextBox x:Name="Dexterity" Margin="5" Width="20" Height="20" />
+            </StackPanel>
+            <StackPanel Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Background="AliceBlue">
+                <Label Content="Constitution"/>
+                <TextBox x:Name="Constitution" Margin="5" Width="20" Height="20" />
+            </StackPanel>
+            <StackPanel Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Background="AliceBlue">
+                <Label Content="Intelligence"/>
+                <TextBox x:Name="Intelligence" Margin="5" Width="20" Height="20" />
+            </StackPanel>
+            <StackPanel Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Background="AliceBlue">
+                <Label Content="Wisdom"/>
+                <TextBox x:Name="Wisdom" Margin="5" Width="20" Height="20" />
+            </StackPanel>
+            <StackPanel Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Background="AliceBlue">
+                <Label Content="Charisma"/>
+                <TextBox x:Name="Charisma" Margin="5" Width="20" Height="20" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
 </Window>
