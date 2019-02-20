@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:DnDCharacterSheet"
         mc:Ignorable="d"
         Title="DnD Character Sheet">
-    <Grid Background="SeaGreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                <GradientStop Color="CornflowerBlue" Offset="0"/>
+                <GradientStop Color="Orchid" Offset="0.567"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -21,14 +27,14 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Border Margin="5" Padding="5" Grid.Column="7" BorderThickness="1" BorderBrush="Red" Background="White" CornerRadius="5">
-            <TextBox Text="Lorem ipsum" BorderBrush="AntiqueWhite"/>
+        <Border Margin="5" Padding="5" Grid.Column="7" BorderThickness="1" BorderBrush="Black" Background="White" CornerRadius="5">
+            <TextBox Text="Lorem ipsum" BorderBrush="AntiqueWhite" BorderThickness="0" />
         </Border>
         <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" FontFamily="Sylfaen" FontSize="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Character Sheet" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <StackPanel Margin="5" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center">
-            <TextBox x:Name="CharacterName" TextAlignment="Center" Text="Character Name" TextWrapping="Wrap" FontFamily="Sylfaen" FontWeight="Bold" FontSize="20"/>
-        </StackPanel>
+        <Border Margin="5" Padding="5" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="1" BorderBrush="Black" Background="White" CornerRadius="5">
+            <TextBox x:Name="CharacterName" TextAlignment="Center" BorderThickness="0" Text="Character Name" TextWrapping="Wrap" FontFamily="Sylfaen" FontWeight="Bold" FontSize="20"/>
+        </Border>
         <StackPanel Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <StackPanel Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Background="AliceBlue">
                 <Label Content="Strength"/>
